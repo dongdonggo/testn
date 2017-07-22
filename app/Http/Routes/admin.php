@@ -19,6 +19,17 @@ Route::group(['middleware' => ['auth:admin']], function ($router) {
     //角色管理
     $router->get('role/ajaxIndex',['uses'=>'RoleController@ajaxIndex','as'=>'admin.role.ajaxIndex']);
     $router->resource('role', 'RoleController');
+
+    //文章管理
+    $router->get('article/ajaxIndex',['uses'=>'ArticleController@ajaxIndex','as'=>'admin.article.ajaxIndex']);
+    $router->resource('article', 'ArticleController');
+
+    //文章分类理
+    $router->get('article-cate/ajaxIndex',['uses'=>'ArticleCateController@ajaxIndex','as'=>'admin.article-cate.ajaxIndex']);
+    $router->resource('article-cate', 'ArticleCateController');
+
+    //测试
+    $router->resource('test', 'TestController');
 });
 
 Route::get('login', ['uses' => 'AuthController@index','as' => 'admin.auth.index']);

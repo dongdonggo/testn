@@ -56,7 +56,12 @@ class AdminUserRepositoryEloquent extends BaseRepository implements AdminUserRep
         if ($this->model) {
             foreach ($this->model as $item) {
                 $item->button = $item->getActionButtons('adminuser');
-                $item->role = $item->roles->toArray()[0]['display_name'];//获取关联的角色
+                if (isset($item->roles->toArray()[0])) {
+                    $item->role = $item->roles->toArray()[0]['display_name'];//获取关联的角色
+                }else{
+                    $item->role = '';
+                }
+                
             }
         }
 

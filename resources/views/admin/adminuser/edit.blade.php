@@ -88,7 +88,14 @@
                                             name="role">
                                         <option value="">-- 请选择 --</option>
                                         @foreach($roles as $key=>$value)
-                                            <option value="{{ $value['id'] }}" @if($value['id'] == $userData['userRole']->role_id) selected="selected" @endif>{{ $value['display_name'] }}</option>
+                                            <option value="{{ $value['id'] }}" 
+                                            @if ($userData['userRole'])
+                                                @if($value['id'] == $userData['userRole']->role_id) selected="selected" 
+                                                @endif
+                                            @endif
+                                            >
+                                            {{ $value['display_name'] }}
+                                            </option>
                                         @endforeach
                                     </select>
                                     <p id="role_error"></p>

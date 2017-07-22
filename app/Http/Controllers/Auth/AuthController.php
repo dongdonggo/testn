@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Contracts\Auth\Factory as Auth;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Log;
 
 class AuthController extends Controller
 {

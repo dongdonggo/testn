@@ -11,7 +11,6 @@ class IndexController extends Controller
 {
     public function index()
     {
-
         die(1);
         $superAdmin = new Role();
         $superAdmin->name         = 'SuperAdmin';
@@ -27,10 +26,6 @@ class IndexController extends Controller
 
         $adminUser = Admin::where('email','admin@admin.com')->first();
         $adminUser->attachRole($superAdmin);
-
-
-
-
 
     }
 

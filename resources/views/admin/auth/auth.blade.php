@@ -58,7 +58,7 @@
                             <button type="submit" class="btn btn-success btn-block btn-lg">登　录</button>
                         </div>
                         <div class="m-t-20 m-b-40 p-b-40">
-                            Not a member yet? Click <a href="register_v3.html" class="text-success">here</a> to register.
+                            Not a member yet? Click <a href="{{ url('admin/register') }}" class="text-success">here</a> to register.
                         </div>
                         <hr />
                         <p class="text-center text-inverse">
