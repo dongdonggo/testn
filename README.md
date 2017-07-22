@@ -1,4 +1,4 @@
-# laravel-multi-auth-admin
+# fuyuan
 > 包含前后台登录认证以及权限管理的后台系统，模板为`color admin`
 
 ![image1](http://7xuntv.com1.z0.glb.clouddn.com/zhanghaobao1.png)
@@ -7,12 +7,6 @@
 
 ![image3](http://7xuntv.com1.z0.glb.clouddn.com/zhanghaobao3.png)
 
-# 安装
-
-## 克隆资源库
-```shell
-git clone https://github.com/jwwb681232/laravel-multi-auth-admin.git ./
-```
 ## 安装依赖关系
 ```shell
 composer install
